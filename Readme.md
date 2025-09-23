@@ -84,7 +84,7 @@ to install into a local repository and generate a pom.xml file for calculating d
 ### Publishing to a distant archiva repo with current configuration
 
 Then run
-`gradlew publish --refresh-dependencies`
+`./gradlew publish --refresh-dependencies`
 
 ## Usage
 
