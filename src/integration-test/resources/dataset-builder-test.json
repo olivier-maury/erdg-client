@@ -165,6 +165,12 @@
           "typeClass" : "compound",
           "multiple" : true,
           "value" : [ {
+            "publicationRelationType": {
+              "typeName": "publicationRelationType",
+              "multiple": false,
+              "typeClass": "controlledVocabulary",
+              "value": "IsCitedBy"
+            },
             "publicationIDType" : {
               "typeName" : "publicationIDType",
               "typeClass" : "controlledVocabulary",

@@ -52,6 +52,7 @@ public class DatasetBuilder {
     private static final String PUBLICATION_ID = "publicationIDNumber";
     private static final String PUBLICATION_ID_TYPE = "publicationIDType";
     private static final String PUBLICATION_CITATION= "publicationCitation";
+    private static final String PUBLICATION_RELATION_TYPE = "publicationRelationType";
     private static final String KEYWORD_VOCABULARY_URI = "keywordVocabularyURI";
     private static final String KEYWORD_VOCABULARY = "keywordVocabulary";
     private static final String KEYWORD_VALUE = "keywordValue";
@@ -291,6 +292,8 @@ public class DatasetBuilder {
         final List<Map<String, Object>> list = new ArrayList<>();
         for (final DatasetPublication publication: publications) {
             final Map<String, Object> map = new HashMap<>();
+            final Field publicationRelationType = createControlledVocabField(PUBLICATION_RELATION_TYPE, false, asList(publication.getPublicationRelationType().name()));
+            map.put(PUBLICATION_RELATION_TYPE, publicationRelationType);
             addOptionalPrimitiveField(publication.getPublicationCitation(), map, PUBLICATION_CITATION);
             addOptionalPrimitiveField(publication.getPublicationIdNumber(), map, PUBLICATION_ID);
             if (publication.getPublicationURL() != null) {

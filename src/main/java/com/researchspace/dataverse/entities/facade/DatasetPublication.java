@@ -29,5 +29,13 @@ public class DatasetPublication {
     private String publicationCitation, publicationIdNumber;
     private PublicationIDType publicationIDType;
     private URL publicationURL;
+    /**
+     * Le 28/07/2025 à 15:40, datainrae a écrit :
+     * > À noter qu'afin d'éviter des erreurs pour les jeux de données
+     * > existants, la valeur "Est cité par" sera appliquée à toutes les
+     * > publications associées existantes.
+     */
+     @Builder.Default
+     private PublicationRelationType publicationRelationType = PublicationRelationType.IsCitedBy;
 
 }
